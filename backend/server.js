@@ -5,10 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 const allowedOrigin = 'https://yoga-frontend-6nod.onrender.com';
 
-// Enable CORS for the specified origin
-app.use(cors({
-  origin: allowedOrigin,
-}));
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -73,7 +70,10 @@ app.post('/api/updateDatabase', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
+// Enable CORS for the specified origin
+app.use(cors({
+  origin: allowedOrigin,
+}));
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
