@@ -1,0 +1,136 @@
+Certainly! Below is the text content of the documentation without any styling:
+
+---
+
+# Yoga Admission Project Documentation
+
+## Overview
+
+The Yoga Admission project is a web application designed to streamline the process of admission for yoga classes. The project consists of a frontend application, built with React, and a backend API, built with Node.js and MongoDB as the database.
+
+## Project Structure
+
+The project is organized into two main parts: the frontend and the backend.
+
+```
+yoga-admission-project/
+|-- frontend/
+|-- backend/
+|-- .gitignore
+|-- README.md
+|-- LICENSE
+```
+
+## Setup and Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/yoga-admission-project.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   cd frontend
+   npm install
+
+   cd ../backend
+   npm install
+   ```
+
+3. Set up environment variables:
+
+   - Create `.env` files in both the `frontend` and `backend` directories and configure necessary variables.
+
+4. Start the application:
+
+   ```bash
+   cd frontend
+   npm start
+
+   cd ../backend
+   npm start
+   ```
+
+## Frontend
+
+### Folder Structure
+
+```
+frontend/
+|-- public/
+|-- src/
+|   |-- components/
+|   |-- pages/
+|   |-- App.js
+|   |-- index.js
+|-- package.json
+|-- ...
+```
+
+### Technologies Used
+
+- React.js
+- React Router
+- Axios for HTTP requests
+- CSS for styling
+
+### Usage
+
+The frontend allows users to fill out an admission form, providing details such as full name, email, age, and preferred batch. Upon form submission, the user is directed to the payment page.
+
+## Backend
+
+### Folder Structure
+
+```
+backend/
+|-- models/
+|-- routes/
+|-- server.js
+|-- package.json
+|-- ...
+```
+
+### Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB (Mongoose for ODM)
+- CORS for cross-origin resource sharing
+- Body-parser for parsing request bodies
+- dotenv for environment variable management
+
+### API Endpoints
+
+- `POST /api/submitForm`: Handles form submissions for yoga admission.
+- `POST /api/updateDatabase`: Handles updating the database with payment information.
+
+## Deployment
+
+The project is deployed using Render. The frontend is hosted on Netlify, and the backend is hosted on Render.
+
+## Testing
+
+The project includes both unit tests and integration tests. Test suites are located in the `tests` directories in both the `frontend` and `backend` folders.
+
+To run tests:
+
+```bash
+cd frontend
+npm test
+
+cd ../backend
+npm test
+```
+
+## Contributing
+
+Contributions to the project are welcome. Follow the guidelines outlined in the CONTRIBUTING.md file.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
