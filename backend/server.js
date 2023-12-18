@@ -3,7 +3,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 require('dotenv').config();
+const allowedOrigin = 'https://yoga-frontend-6nod.onrender.com';
 
+// Enable CORS for the specified origin
+app.use(cors({
+  origin: allowedOrigin,
+}));
 const app = express();
 const PORT = process.env.PORT || 5000;
 
