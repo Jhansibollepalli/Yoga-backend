@@ -7,6 +7,11 @@ const allowedOrigin = 'https://yoga-frontend-6nod.onrender.com';
 
 
 const app = express();
+app.use(cors({
+  origin: allowedOrigin,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow credentials (e.g., cookies, authorization headers)
+}));
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
@@ -71,9 +76,6 @@ app.post('/api/updateDatabase', async (req, res) => {
   }
 });
 // Enable CORS for the specified origin
-app.use(cors({
-  origin: allowedOrigin,
-}));
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
