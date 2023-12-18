@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://rahulgottimukkula96:amnesia_05@cluster0.ound1ag.mongodb.net/Yoga");
+mongoose.connect("mongodb+srv://jhansibollepalli18:jhansi1807@yogacluster.9cmsrpw.mongodb.net/Yoga");
 
 const customerSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
